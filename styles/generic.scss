@@ -1,0 +1,20 @@
+@import '~normalize.css';
+
+$font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+html {
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: 16px;
+  margin: 1rem;
+  body {
+    font-size: 1rem;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
