@@ -6,8 +6,7 @@ import getMuiTheme from "material-ui/styles/getMuiTheme";
 export default class extends React.Component {
 
   static childContextTypes = {
-    muiTheme: React.PropTypes.object.isRequired,
-    onTouchTap: React.PropTypes.func,
+    muiTheme: React.PropTypes.object.isRequired
   };
 
   getChildContext() {
