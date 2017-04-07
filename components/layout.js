@@ -1,7 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import baseTheme from '../styles/theme';
-import getMuiTheme from "material-ui/styles/getMuiTheme";
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
 export default class extends React.Component {
 

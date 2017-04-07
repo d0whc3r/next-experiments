@@ -2,9 +2,9 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import Link from "next/link";
+import Link from 'next/link';
 
-import generic from "../styles/generic.scss";
+import generic from '../styles/generic.scss';
 
 export default class extends Document {
   static async getInitialProps(ctx) {
