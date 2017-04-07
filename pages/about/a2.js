@@ -1,15 +1,17 @@
 import React from 'react';
+import Layout from "../../components/layout";
 
 export default class extends React.Component {
-  static getInitialProps() {
-    return { title: 'About new title' }
+  constructor(props) {
+    super(props);
+    this.title = 'About new title';
   }
 
   render() {
     return (
-      <div title="About page">
+      <Layout title={this.title}>
         About us2
-      </div>
+      </Layout>
     );
   }
 }
