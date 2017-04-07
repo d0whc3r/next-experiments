@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class About2Page extends React.Component {
+export default class extends React.Component {
   static getInitialProps() {
     return { title: 'About new title' }
   }
