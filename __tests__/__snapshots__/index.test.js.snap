@@ -2,6 +2,21 @@
 
 exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
 <div>
+  <nav>
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+     |
+    <a
+      href="/about"
+      onClick={[Function]}
+    >
+      About
+    </a>
+  </nav>
   <div>
     Hello World. 
     <a
@@ -134,5 +149,8 @@ exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
       b
     </a>
   </li>
+  <footer>
+    footer
+  </footer>
 </div>
 `;
