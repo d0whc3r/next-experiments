@@ -1,10 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-import baseTheme from '../styles/theme';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NProgress from 'nprogress';
 import Router from 'next/router';
 import Link from 'next/link';
+
+import baseTheme from '../styles/theme';
 
 Router.onRouteChangeStart = (url) => {
   console.log(`Loading: ${url}`);
@@ -13,13 +14,11 @@ Router.onRouteChangeStart = (url) => {
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-export default class extends React.Component {
-
-  static getInitialProps({ children, title = 'This is the default title', stylesheet = [] }) {
-    const style = stylesheet ? (
-      <style dangerouslySetInnerHTML={{ __html: stylesheet }}/>
-    ) : '';
-    return { children, title, style };
+export default class Layout extends React.Component {
+  constructor(props) {
+    super(props);
+    const { title = 'This is the default title', style = [] } = props;
+    this.info = { title, style };
   }
 
   static childContextTypes = {
@@ -32,20 +31,12 @@ export default class extends React.Component {
     };
   }
 
-  getTitle() {
-    if(this.props.title) {
-      return (<title>{this.props.title}</title>);
-    } else {
-      return ('');
-    }
-  }
-
   render() {
     return (
       <div>
         <Head>
-          { this.getTitle() }
-          { this.props.style }
+          { this.info.title &&  <title>{this.info.title}</title> }
+          { this.info.style && <style dangerouslySetInnerHTML={{ __html: this.info.style }}/> }
         </Head>
 
         <nav>

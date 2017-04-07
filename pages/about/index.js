@@ -1,11 +1,11 @@
 import React from 'react';
 
-// import Layout from '../../components/layout';
+import Layout from '../../components/layout';
 import Cat from '../../images/cat.svg';
 
 export default () => (
-  <div>
+  <Layout>
     <Cat/>
     About us
-  </div>
+  </Layout>
 )

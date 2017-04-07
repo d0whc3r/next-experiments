@@ -1,8 +1,9 @@
 //colors
 $progress_color: #60d;
-$iconsize: 24px;
-$spinnersize: $iconsize - 3;
-$barheight: 5px;
+$iconsize: 21px;
+$barheight: 3px;
+$spinnerpos: $barheight * 2;
+$spinnerduration: 600ms;
 
 #nprogress {
   pointer-events: none;
@@ -31,8 +32,8 @@ $barheight: 5px;
     display: block;
     position: fixed;
     z-index: 1031;
-    top: $spinnersize;
-    right: $spinnersize;
+    top: $spinnerpos;
+    right: $spinnerpos;
   }
   .spinner-icon {
     width: $iconsize;
@@ -44,7 +45,7 @@ $barheight: 5px;
     border-left-color: $progress_color;
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
     border-radius: 50%;
-    animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner $spinnerduration linear infinite;
   }
 }
 
