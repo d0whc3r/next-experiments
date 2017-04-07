@@ -2,9 +2,10 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-import Link from 'next/link';
+// import Link from 'next/link';
 
 import generic from '../styles/generic.scss';
+import loadingbar from '../styles/nprogress.scss';
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -12,7 +13,7 @@ export default class extends Document {
     // const props = await Document.getInitialProps(ctx);
     const userAgent = ctx.req.headers['user-agent'] || 'all';
     const styles = (
-      <style dangerouslySetInnerHTML={{ __html: generic }}/>
+      <style dangerouslySetInnerHTML={{ __html: [generic, loadingbar] }}/>
     );
     return {
       page,
@@ -23,34 +24,23 @@ export default class extends Document {
 
   render() {
     return (
-      <html>
-      <Head>
-        <title>New page</title>
-        <meta charSet='utf-8'/>
-        <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
-        {this.props.styles}
-      </Head>
-      <body>
       <MuiThemeProvider muiTheme={getMuiTheme({ userAgent: this.props.userAgent })}>
-        <div>
-          <header>
-            <nav>
-              <Link href='/'><a>Home</a></Link> |
-              <Link href='/about'><a>About</a></Link>
-            </nav>
-          </header>
+        <html>
+        <Head>
+          <title>New page</title>
+          <meta charSet='utf-8'/>
+          <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
+          {this.props.styles}
+        </Head>
+        <body>
 
-          <Main/>
-          <footer>
-            footer
-          </footer>
+        <Main/>
 
-          <NextScript />
-        </div>
+        <NextScript />
+
+        </body>
+        </html>
       </MuiThemeProvider>
-
-      </body>
-      </html>
     )
   }
 }
