@@ -1,19 +1,13 @@
 {
   "presets": [
     "latest",
+    "next/babel",
     "react"
   ],
   "plugins": [
     "transform-object-rest-spread",
     "transform-class-properties",
-    "transform-runtime"
-  ],
-  "env": {
-    "test": {
-      "presets": [
-        "es2015",
-        "./babel"
-       ]
-    }
-  }
+    "transform-runtime",
+    "inline-react-svg"
+  ]
 }
