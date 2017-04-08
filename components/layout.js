@@ -3,24 +3,27 @@ import Head from 'next/head';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NProgress from 'nprogress';
 import { Link } from 'next-url-prettifier';
-const nRouter = require('next/router');
-// import Router from 'next/router';
+// const nRouter = require('next/router');
+import Router from 'next/router';
 
-import { Router } from '../routes';
+import { Router as ownRouter } from '../routes';
 import baseTheme from '../styles/theme';
 
-nRouter.onRouteChangeStart = (url) => {
+Router.onRouteChangeStart = (url) => {
   console.log(`Loading: ${url}`);
   NProgress.start();
 };
-nRouter.onRouteChangeComplete = () => NProgress.done();
-nRouter.onRouteChangeError = () => NProgress.done();
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
 
 export default class Layout extends React.Component {
   constructor(props) {
     super(props);
-    const { title = 'This is the default title', style = [] } = props;
-    this.info = { title, style };
+    const { title = 'This is the default title', style = null } = props;
+    this.state = { title };
+    if (style) {
+      this.state.style = style;
+    }
   }
 
   static childContextTypes = {
@@ -37,15 +40,15 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Head>
-          { this.info.title && <title>{this.info.title}</title> }
-          { this.info.style && <style dangerouslySetInnerHTML={{ __html: this.info.style }}/> }
+          { this.state.title && <title>{this.state.title}</title> }
+          { this.state.style && <style dangerouslySetInnerHTML={{ __html: this.state.style }}/> }
         </Head>
 
         <nav>
           <Link href='/'><a>Home</a></Link> |
-          <Link route={Router.linkPage('index')}><a>index2</a></Link> |
-          <Link route={Router.linkPage('about')}><a>About</a></Link> |
-          <Link route={Router.linkPage('a2')}><a>About 2</a></Link>
+          <Link route={ownRouter.linkPage('index')}><a>index2</a></Link> |
+          <Link route={ownRouter.linkPage('about')}><a>About</a></Link> |
+          <Link route={ownRouter.linkPage('a2')}><a>About 2</a></Link>
           <Link href='./a2'><a>About</a></Link>
         </nav>
 

@@ -15,7 +15,7 @@ export default class extends React.Component {
     const { lang, name } = this.props;
     const switchLang = lang === 'fr' ? 'en' : 'fr';
     return (
-      <Link route={Router.linkPage('/about', { name, lang: switchLang })}>
+      <Link route={Router.linkPage('about', { name, lang: switchLang })}>
         <a>{switchLang === 'fr' ? 'Français' : 'English'}</a>
       </Link>
     )

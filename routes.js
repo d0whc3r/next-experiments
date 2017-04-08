@@ -6,7 +6,7 @@ const routes = [
     prettyUrl: '/'
   }, {
     page: 'about',
-    prettyUrl: '/about/'
+    prettyUrl: '/about'
     // prettyUrl: ({lang = '', name = ''}) =>
     //   (lang === 'fr' ? `/bonjour/about/${name}` : `/hello/about/${name}`),
     // prettyUrlPatterns: [

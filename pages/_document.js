@@ -25,7 +25,7 @@ export default class extends Document {
       <MuiThemeProvider muiTheme={getMuiTheme({ userAgent: this.props.userAgent })}>
         <html>
         <Head>
-          <title>New page</title>
+          {/*<title></title>*/}
           <meta charSet='utf-8'/>
           <meta name='viewport' content='initial-scale=1.0, width=device-width'/>
           {this.props.styles}
