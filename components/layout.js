@@ -2,17 +2,19 @@ import React from 'react';
 import Head from 'next/head';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NProgress from 'nprogress';
-import Router from 'next/router';
-import Link from 'next/link';
+// import Router from 'next/router';
+const nRouter = require('next/router');
+import { Link } from 'next-url-prettifier';
 
+import { Router } from '../routes';
 import baseTheme from '../styles/theme';
 
-Router.onRouteChangeStart = (url) => {
+nRouter.onRouteChangeStart = (url) => {
   console.log(`Loading: ${url}`);
   NProgress.start();
 };
-Router.onRouteChangeComplete = () => NProgress.done();
-Router.onRouteChangeError = () => NProgress.done();
+nRouter.onRouteChangeComplete = () => NProgress.done();
+nRouter.onRouteChangeError = () => NProgress.done();
 
 export default class Layout extends React.Component {
   constructor(props) {
@@ -35,13 +37,16 @@ export default class Layout extends React.Component {
     return (
       <div>
         <Head>
-          { this.info.title &&  <title>{this.info.title}</title> }
+          { this.info.title && <title>{this.info.title}</title> }
           { this.info.style && <style dangerouslySetInnerHTML={{ __html: this.info.style }}/> }
         </Head>
 
         <nav>
           <Link href='/'><a>Home</a></Link> |
-          <Link href='/about'><a>About</a></Link>
+          <Link route={Router.linkPage('index')}><a>index2</a></Link> |
+          <Link route={Router.linkPage('about')}><a>About</a></Link> |
+          <Link route={Router.linkPage('a2')}><a>About 2</a></Link>
+          <Link route='about'><a>About</a></Link>
         </nav>
 
         { this.props.children }

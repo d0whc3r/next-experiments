@@ -3019,6 +3019,10 @@ negotiator@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/negotiator/-/negotiator-0.6.1.tgz#2b327184e8992101177b28563fb5e7102acd0ca9"
 
+next-url-prettifier@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/next-url-prettifier/-/next-url-prettifier-1.1.2.tgz#f2bbbf10f4c469440261624d5378003e67bbb067"
+
 next@^2.0.1:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/next/-/next-2.1.0.tgz#7a94c7666f87064274d546c1f2574f01015e5023"
