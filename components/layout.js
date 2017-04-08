@@ -46,7 +46,7 @@ export default class Layout extends React.Component {
           <Link route={Router.linkPage('index')}><a>index2</a></Link> |
           <Link route={Router.linkPage('about')}><a>About</a></Link> |
           <Link route={Router.linkPage('a2')}><a>About 2</a></Link>
-          <Link route='about'><a>About</a></Link>
+          <Link href='./a2'><a>About</a></Link>
         </nav>
 
         { this.props.children }

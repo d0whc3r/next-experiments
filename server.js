@@ -11,14 +11,6 @@ app.prepare()
   .then(() => {
     const server = express();
 
-    // server.get('/a', (req, res) => {
-    //   return app.render(req, res, '/b', req.query)
-    // });
-    //
-    // server.get('/b', (req, res) => {
-    //   return app.render(req, res, '/a', req.query)
-    // });
-
     Router.forEachPattern((page, pattern, defaultParams) => server.get(pattern, (req, res) =>
       app.render(req, res, `/${page}`, Object.assign({}, defaultParams, req.query, req.params))
     ));
