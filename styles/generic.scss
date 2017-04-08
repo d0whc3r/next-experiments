@@ -1,19 +1,17 @@
 @import '~normalize.css';
+@import url('//fonts.googleapis.com/css?family=Roboto|Share+Tech+Mono');
 @import url('//fonts.googleapis.com/icon?family=Material+Icons');
 
-$font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+//$font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-family: 'Share Tech Mono', monospace;
 html {
   box-sizing: border-box;
-  font-family: $font-family;
   font-size: 16px;
-  margin: 0rem;
+  margin: 0;
   body {
+    font-family: $font-family;
     font-size: 1rem;
   }
-}
-
-div {
-  border: 1px solid black;
 }
 
 *,
@@ -23,3 +21,20 @@ div {
   margin: 0;
   padding: 0;
 }
+
+#navigationbar {
+  margin: 0;
+}
+
+#root {
+  margin: 0 1rem;
+}
+
+#footer {
+  margin: 0;
+  margin-bottom: 1.5rem;
+}
+
+  div {
+    border: 1px solid black;
+  }

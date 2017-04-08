@@ -40,7 +40,7 @@ export default class Navigation extends React.Component {
    */
   render() {
     return (
-      <Tabs>
+      <Tabs id="navigationbar">
         <Tab
           icon={<FontIcon className="material-icons">home</FontIcon>}
           label="RECENTS"

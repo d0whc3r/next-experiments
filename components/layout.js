@@ -37,19 +37,21 @@ export default class Layout extends React.Component {
 
   render() {
     return (
-      <div>
+      <wrapper>
         <Head>
           { this.state.title && <title>{this.state.title}</title> }
           { this.state.style && <style dangerouslySetInnerHTML={{ __html: this.state.style }}/> }
         </Head>
         <Navigation></Navigation>
 
-        { this.props.children }
+        <div id="root">
+          { this.props.children }
+        </div>
 
-        <footer>
+        <div id="footer">
           footer
-        </footer>
-      </div>
+        </div>
+      </wrapper>
     );
   }
 }
