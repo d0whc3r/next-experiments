@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NProgress from 'nprogress';
-// import Router from 'next/router';
-const nRouter = require('next/router');
 import { Link } from 'next-url-prettifier';
+const nRouter = require('next/router');
+// import Router from 'next/router';
 
 import { Router } from '../routes';
 import baseTheme from '../styles/theme';

@@ -2,17 +2,6 @@ import Document, { Head, Main, NextScript } from 'next/document';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 
-// import Link from 'next/link';
-// import Router from 'next/router';
-// import NProgress from 'nprogress';
-//
-// Router.onRouteChangeStart = (url) => {
-//   console.log(`Loading: ${url}`);
-//   NProgress.start();
-// };
-// Router.onRouteChangeComplete = () => NProgress.done();
-// Router.onRouteChangeError = () => NProgress.done();
-
 import generic from '../styles/generic.scss';
 import loadingbar from '../styles/nprogress.scss';
 
