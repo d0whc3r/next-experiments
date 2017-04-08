@@ -1,11 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Head from 'next/head';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
-import NProgress from 'nprogress';
 import Router from 'next/router';
+import NProgress from 'nprogress';
 
-import baseTheme from '../styles/theme';
 import Navigation from './header';
 
 Router.onRouteChangeStart = (url) => {
@@ -23,16 +20,6 @@ export default class Layout extends React.Component {
     if (style) {
       this.state.style = style;
     }
-  }
-
-  static childContextTypes = {
-    muiTheme: PropTypes.object.isRequired
-  };
-
-  getChildContext() {
-    return {
-      muiTheme: getMuiTheme(baseTheme())
-    };
   }
 
   render() {

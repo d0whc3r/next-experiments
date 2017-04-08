@@ -1,347 +1,109 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`With Snapshot Testing App shows "Hello world!" 1`] = `
-<div>
-  <div
-    style={
-      Object {
-        "muiPrepared": true,
-      }
-    }
+<wrapper>
+  <nav
+    id="navigationbar"
   >
-    <div
-      style={
-        Object {
-          "backgroundColor": "#2196F3",
-          "display": "flex",
-          "muiPrepared": true,
-          "whiteSpace": "nowrap",
-          "width": "100%",
-        }
-      }
+    <a
+      href="/"
+      onClick={[Function]}
     >
-      <button
-        disabled={undefined}
-        href={undefined}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onTouchTap={[Function]}
-        style={
-          Object {
-            "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-            "background": "none",
-            "border": 10,
-            "boxSizing": "border-box",
-            "color": "#ffffff",
-            "cursor": "pointer",
-            "display": "inline-block",
-            "fontFamily": "Roboto, sans-serif",
-            "fontSize": 14,
-            "fontWeight": 500,
-            "margin": 0,
-            "muiPrepared": true,
-            "outline": "none",
-            "padding": 0,
-            "position": "relative",
-            "textDecoration": "none",
-            "textTransform": "uppercase",
-            "verticalAlign": null,
-            "width": "50%",
-            "zIndex": 1,
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <div
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-        >
-          <div
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": 72,
-                "justifyContent": "center",
-              }
-            }
-          >
-            <span
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "#ffffff",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "marginBottom": 5,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              home
-            </span>
-            RECENTS
-          </div>
-        </div>
-      </button>
-      <button
-        disabled={undefined}
-        href={undefined}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onTouchTap={[Function]}
-        style={
-          Object {
-            "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-            "background": "none",
-            "border": 10,
-            "boxSizing": "border-box",
-            "color": "rgba(255, 255, 255, 0.7)",
-            "cursor": "pointer",
-            "display": "inline-block",
-            "fontFamily": "Roboto, sans-serif",
-            "fontSize": 14,
-            "fontWeight": 500,
-            "margin": 0,
-            "muiPrepared": true,
-            "outline": "none",
-            "padding": 0,
-            "position": "relative",
-            "textDecoration": "none",
-            "textTransform": "uppercase",
-            "verticalAlign": null,
-            "width": "50%",
-            "zIndex": 1,
-          }
-        }
-        tabIndex={0}
-        type="button"
-      >
-        <div
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchStart={[Function]}
-        >
-          <div
-            style={
-              Object {
-                "alignItems": "center",
-                "display": "flex",
-                "flexDirection": "column",
-                "height": 72,
-                "justifyContent": "center",
-              }
-            }
-          >
-            <span
-              className="material-icons"
-              onMouseEnter={[Function]}
-              onMouseLeave={[Function]}
-              style={
-                Object {
-                  "color": "rgba(255, 255, 255, 0.7)",
-                  "display": "inline-block",
-                  "fontSize": 24,
-                  "marginBottom": 5,
-                  "muiPrepared": true,
-                  "position": "relative",
-                  "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-                  "userSelect": "none",
-                }
-              }
-            >
-              print
-            </span>
-            FAVORITES
-          </div>
-        </div>
-      </button>
-    </div>
-    <div
-      style={
-        Object {
-          "width": "100%",
-        }
-      }
+      Home
+    </a>
+     |
+    <a
+      href="/"
+      onClick={[Function]}
     >
-      <div
-        style={
-          Object {
-            "backgroundColor": "#FF5722",
-            "bottom": 0,
-            "display": "block",
-            "height": 2,
-            "left": "0%",
-            "marginTop": -2,
-            "muiPrepared": true,
-            "position": "relative",
-            "transition": "left 1s cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            "width": "50%",
-          }
-        }
-      />
-    </div>
-    <div
-      className={undefined}
-      style={
-        Object {
-          "muiPrepared": true,
-        }
-      }
-    />
-  </div>
-  <div>
-    Hello World. 
+      index2
+    </a>
+     |
     <a
       href="/about"
       onClick={[Function]}
     >
       About
     </a>
+     |
+    <a
+      href="/about/a2"
+      onClick={[Function]}
+    >
+      About 2
+    </a>
+    <a
+      href="./a2"
+      onClick={[Function]}
+    >
+      About
+    </a>
+  </nav>
+  <div
+    id="root"
+  >
+    <div>
+      Hello World. 
+      <a
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+    </div>
+    <button
+      className="ui primary button"
+      onClick={[Function]}
+      tabIndex={undefined}
+    >
+      Button
+    </button>
+    <button
+      className="ui secondary button"
+      onClick={[Function]}
+      tabIndex={undefined}
+    >
+      Button
+    </button>
+    <button
+      className="ui button"
+      onClick={[Function]}
+      tabIndex={undefined}
+    >
+      Button
+    </button>
+    <button
+      className="ui green small button"
+      onClick={[Function]}
+      tabIndex={undefined}
+    >
+      <i
+        aria-hidden="true"
+        className="download icon"
+      />
+      Download
+    </button>
+    <li>
+      <a
+        href="/a"
+        onClick={[Function]}
+      >
+        a
+      </a>
+    </li>
+    <li>
+      <a
+        href="/b"
+        onClick={[Function]}
+      >
+        b
+      </a>
+    </li>
   </div>
   <div
-    className={undefined}
-    style={
-      Object {
-        "WebkitTapHighlightColor": "rgba(0,0,0,0)",
-        "backgroundColor": "#ffffff",
-        "borderRadius": 2,
-        "boxShadow": "0 1px 6px rgba(0, 0, 0, 0.12),
-               0 1px 4px rgba(0, 0, 0, 0.12)",
-        "boxSizing": "border-box",
-        "color": "rgba(0, 0, 0, 0.87)",
-        "display": "inline-block",
-        "fontFamily": "Roboto, sans-serif",
-        "minWidth": 88,
-        "muiPrepared": true,
-        "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-      }
-    }
+    id="footer"
   >
-    <button
-      disabled={false}
-      href={undefined}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseEnter={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchStart={[Function]}
-      onTouchTap={[Function]}
-      style={
-        Object {
-          "WebkitTapHighlightColor": "rgba(0, 0, 0, 0)",
-          "backgroundColor": "#2196F3",
-          "border": 10,
-          "borderRadius": 2,
-          "boxSizing": "border-box",
-          "cursor": "pointer",
-          "display": "inline-block",
-          "fontFamily": "Roboto, sans-serif",
-          "fontSize": "inherit",
-          "fontWeight": "inherit",
-          "height": 36,
-          "lineHeight": "36px",
-          "margin": 0,
-          "muiPrepared": true,
-          "outline": "none",
-          "padding": 0,
-          "position": "relative",
-          "textAlign": "center",
-          "textDecoration": "none",
-          "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-          "verticalAlign": null,
-          "width": "100%",
-          "zIndex": 1,
-        }
-      }
-      tabIndex={0}
-      type="button"
-    >
-      <div
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchStart={[Function]}
-      >
-        <div
-          style={
-            Object {
-              "backgroundColor": false,
-              "borderRadius": 2,
-              "height": 36,
-              "muiPrepared": true,
-              "top": 0,
-              "transition": "all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms",
-            }
-          }
-        >
-          <span
-            style={
-              Object {
-                "color": "#ffffff",
-                "fontSize": 14,
-                "fontWeight": 500,
-                "letterSpacing": 0,
-                "margin": 0,
-                "muiPrepared": true,
-                "opacity": 1,
-                "paddingLeft": 16,
-                "paddingRight": 16,
-                "position": "relative",
-                "textTransform": "uppercase",
-                "userSelect": "none",
-              }
-            }
-          >
-            Button
-          </span>
-        </div>
-      </div>
-    </button>
-  </div>
-  <li>
-    <a
-      href="/a"
-      onClick={[Function]}
-    >
-      a
-    </a>
-  </li>
-  <li>
-    <a
-      href="/b"
-      onClick={[Function]}
-    >
-      b
-    </a>
-  </li>
-  <footer>
     footer
-  </footer>
-</div>
+  </div>
+</wrapper>
 `;
