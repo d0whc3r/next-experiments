@@ -1,13 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Head from 'next/head';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import NProgress from 'nprogress';
-import { Link } from 'next-url-prettifier';
-// const nRouter = require('next/router');
 import Router from 'next/router';
 
-import { Router as ownRouter } from '../routes';
 import baseTheme from '../styles/theme';
+import Navigation from './header';
 
 Router.onRouteChangeStart = (url) => {
   console.log(`Loading: ${url}`);
@@ -27,7 +26,7 @@ export default class Layout extends React.Component {
   }
 
   static childContextTypes = {
-    muiTheme: React.PropTypes.object.isRequired
+    muiTheme: PropTypes.object.isRequired
   };
 
   getChildContext() {
@@ -43,14 +42,7 @@ export default class Layout extends React.Component {
           { this.state.title && <title>{this.state.title}</title> }
           { this.state.style && <style dangerouslySetInnerHTML={{ __html: this.state.style }}/> }
         </Head>
-
-        <nav>
-          <Link href='/'><a>Home</a></Link> |
-          <Link route={ownRouter.linkPage('index')}><a>index2</a></Link> |
-          <Link route={ownRouter.linkPage('about')}><a>About</a></Link> |
-          <Link route={ownRouter.linkPage('a2')}><a>About 2</a></Link>
-          <Link href='./a2'><a>About</a></Link>
-        </nav>
+        <Navigation></Navigation>
 
         { this.props.children }
 
