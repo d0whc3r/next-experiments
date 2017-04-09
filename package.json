@@ -7,6 +7,7 @@
     "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
+    "del": "rm -fr node_modules .next yarn.lock",
     "semantic": "gulp --gulpfile semantic/gulpfile.js build"
   },
   "dependencies": {

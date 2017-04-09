@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import { Container } from 'semantic-ui-react';
 
 import Navigation from './header';
 
@@ -24,7 +25,7 @@ export default class Layout extends React.Component {
 
   render() {
     return (
-      <wrapper>
+      <Container fluid>
         <Head>
           { this.state.title && <title>{this.state.title}</title> }
           { this.state.style && <style dangerouslySetInnerHTML={{ __html: this.state.style }}/> }
@@ -38,7 +39,7 @@ export default class Layout extends React.Component {
         <div id="footer">
           footer
         </div>
-      </wrapper>
+      </Container>
     );
   }
 }
