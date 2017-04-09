@@ -1,11 +1,8 @@
 import Document, { Head, Main, NextScript } from 'next/document';
-// import jQuery from 'jquery';
-// window.jQuery = jQuery;
-// import '../semantic/dist/semantic.min';
 
 import generic from '../styles/generic.scss';
 import loadingbar from '../styles/nprogress.scss';
-import semantic from '../semantic/dist/semantic.css';
+import semantic from '../semantic/dist/semantic.min.css';
 
 export default class extends Document {
   static async getInitialProps(ctx) {

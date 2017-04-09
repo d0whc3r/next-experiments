@@ -13,15 +13,6 @@ app.prepare()
   .then(() => {
     const server = express();
 
-    // server.get('/static/themes/*', (req, res) => {
-    //   const file = path.join(__dirname, req.originalUrl);
-    //   if (fs.existsSync(file)) {
-    //     res.send(file);
-    //   } else {
-    //     handle(req, res)
-    //   }
-    // });
-
     Router.forEachPattern((page, pattern, defaultParams) => server.get(pattern, (req, res) =>
       app.render(req, res, `/${page}`, Object.assign({}, defaultParams, req.query, req.params))
     ));
