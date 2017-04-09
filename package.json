@@ -13,7 +13,6 @@
   "dependencies": {
     "express": "^4.15.2",
     "next": "^2.1.0",
-    "next-url-prettifier": "^1.1.2",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
     "semantic-ui-react": "^0.67.2"

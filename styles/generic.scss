@@ -4,6 +4,9 @@
 
 //$font-family: 'Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 $font-family: 'Share Tech Mono', monospace;
+$min-margin: 2px;
+$main-margin: 6px;
+
 html {
   box-sizing: border-box;
   margin: 0;
@@ -13,24 +16,24 @@ html {
   }
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+//*,
+//*:before,
+//*:after {
+//  box-sizing: border-box;
+//  margin: 0;
+//  padding: 0;
+//}
 
 #navigationbar {
-  margin: 0;
+  padding: $min-margin $main-margin;
 }
 
 #root {
-  margin: 0 1rem;
+  padding: $min-margin 1rem;
 }
 
 #footer {
-  margin: 0 0 1.5rem;
+  padding: $min-margin $main-margin 1.5rem $main-margin;
 }
 
 //div {

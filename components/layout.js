@@ -20,6 +20,7 @@ export default class Layout extends React.Component {
     this.state = { title };
     if (style) {
       this.state.style = style;
+      console.log('set style', style);
     }
   }
 
@@ -28,17 +29,16 @@ export default class Layout extends React.Component {
       <Container fluid>
         <Head>
           { this.state.title && <title>{this.state.title}</title> }
-          { this.state.style && <style dangerouslySetInnerHTML={{ __html: this.state.style }}/> }
         </Head>
         <Navigation></Navigation>
 
-        <div id="root">
+        <Container id="root" style={this.state.style} fluid>
           { this.props.children }
-        </div>
+        </Container>
 
-        <div id="footer">
+        <Container id="footer" fluid>
           footer
-        </div>
+        </Container>
       </Container>
     );
   }
