@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import { Container } from 'semantic-ui-react';
+import { connect } from 'react-redux';
 
 import Navigation from './header';
 
@@ -13,7 +14,7 @@ Router.onRouteChangeStart = (url) => {
 Router.onRouteChangeComplete = () => NProgress.done();
 Router.onRouteChangeError = () => NProgress.done();
 
-export default class Layout extends React.Component {
+class Layout extends React.Component {
   constructor(props) {
     super(props);
     const { title = 'This is the default title', style = null } = props;
@@ -43,3 +44,6 @@ export default class Layout extends React.Component {
     );
   }
 }
+
+export const LayoutRedux = connect(state => state)(Layout);
+export default Layout;

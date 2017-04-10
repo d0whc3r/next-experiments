@@ -1,17 +1,29 @@
 import React from 'react';
 import Link from 'next/link';
+import withRedux from 'next-redux-wrapper';
 
-import Layout from '../../components/layout';
+import { LayoutRedux } from '../../components/layout';
 import Cat from '../../images/cat.svg';
+import { configure } from '../../store';
+import redux, { sample } from './redux';
 
-export default class extends React.Component {
+
+class About extends React.Component {
+  static getInitialProps({ store, isServer }) {
+    store.dispatch(sample());
+    return { isServer }
+  }
+
   render() {
+    console.log('render', arguments);
     return (
-      <Layout>
+      <LayoutRedux>
         <Cat/>
         About us
         <Link href="./a2">asdf</Link>
-      </Layout>
+      </LayoutRedux>
     )
   }
 }
+
+export default withRedux(configure)(About);

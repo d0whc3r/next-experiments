@@ -1,20 +1,22 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
 
-export const reducer = (state = {lastUpdate: 0, light: false}, action) => {
-  switch (action.type) {
-    case 'TICK':
-      return {lastUpdate: action.ts, light: !!action.light};
-    default:
-      return state
-  }
-};
+import sample from './pages/about/redux';
 
-export const startClock = () => dispatch => {
-  return setTimeout(() => dispatch({type: 'TICK', light: true, ts: Date.now()}), 2000)
-};
+const rootReducer = combineReducers({ sample });
+export default rootReducer;
 
-export const initStore = (initialState) => {
+let devredux = f => f;
+try {
+  devredux = window && window.devToolsExtension ? window.devToolsExtension() : f => f;
+} catch (e) {
+  console.log('In server...', e);
+}
+
+export const configure = (initialState = {}) => {
   console.log('initial state', initialState);
-  return createStore(reducer, initialState, applyMiddleware(thunkMiddleware))
+  return createStore(rootReducer, initialState, compose(
+    applyMiddleware(thunkMiddleware),
+    devredux
+  ));
 };
