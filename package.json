@@ -11,7 +11,7 @@
     "semantic": "gulp --gulpfile semantic/gulpfile.js build"
   },
   "dependencies": {
-    "express": "^4.15.2",
+    "express": "^4.17.3",
     "next": "^2.1.0",
     "react": "^15.5.3",
     "react-dom": "^15.5.3",
